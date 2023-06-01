@@ -15,11 +15,13 @@ const CreateContact = ({ setBtnStatus }: { setBtnStatus: React.Dispatch<React.Se
     const dispatch = useAppDispatch()
 
     // handle submit
+    // basic validation with warning msg
     function handleSubmit() {
         if (!firstName || !lastName) {
             warn()
             return
         }
+        // all good then add details to contact 
         const contact: IContactState = { firstName, lastName, status, id: nanoid(3) }
         dispatch(addContact(contact))
         notify()

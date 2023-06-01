@@ -8,11 +8,16 @@ const notifyEditSaved = () => toast.success('Edited contact saved');
 
 
 const EditContact = ({ setBtnStatus, contact }: { setBtnStatus: React.Dispatch<React.SetStateAction<boolean>>, contact: IContactState }) => {
+    // mostly its the same the same logic as create contact btn but there are few additions
+    // as a results i created two components to not over complicate stuff make make use of a 
+    // single component with several tweaks here and there 
+    // setting up states dispatch
     const [firstName, setFirstName] = useState(contact.firstName)
     const [lastName, setLastName] = useState(contact.lastName)
     const [status, setStatus] = useState(contact.status)
     const dispatch = useAppDispatch()
 
+    // basic validation and calling dispatch function
     function handleSubmit() {
         if (!firstName || !lastName) {
             warn()
