@@ -8,11 +8,13 @@ const notify = () => toast.success('Contact saved');
 const warn = () => toast.error('Enter all fields');
 
 const CreateContact = ({ setBtnStatus }: { setBtnStatus: React.Dispatch<React.SetStateAction<boolean>> }) => {
+    // useState, dispatch to store all things we need
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [status, setStatus] = useState(false)
     const dispatch = useAppDispatch()
 
+    // handle submit
     function handleSubmit() {
         if (!firstName || !lastName) {
             warn()

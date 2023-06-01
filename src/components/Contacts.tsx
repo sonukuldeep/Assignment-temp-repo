@@ -7,25 +7,34 @@ import CreateContact from './CreateContact'
 import { useAppDispatch } from '../redux/hooks'
 import { deleteContact } from '../redux/slice/contactSlice'
 import EditContact from './EditContact'
+
+// messeage for hot toast nootification
 const notify = () => toast('Contact purged', { icon: '🗑' });
 
 const Contacts = () => {
+    // setting btns triggers getting contacts from store etc
     const [isBtnActive, setIsBtnActive] = useState(false)
-    const [editContact, setEditContact] = useState<IContactState>()
     const [editTrigger, setEditTrrigger] = useState(false)
+    const [editContact, setEditContact] = useState<IContactState>()
     const contactDetails = useAppSelector(state => state.contact)
+    // this is a custom hook. Helps for better type casting
     const dispatch = useAppDispatch()
 
+    // tiny function that invokes setEdit contact and passes the contract
+    // triggers edit btn
     function handleEdit(contact: IContactState) {
         setEditContact(contact)
         setEditTrrigger(pre => !pre)
     }
 
+    // handle edit calls dispatch to relete the cotract
     function handleContactDelete(contact: IContactState) {
         dispatch(deleteContact(contact.id))
         notify()
     }
 
+    // if edit create btn is clicked createContact is rendered(see at the end of this if) else
+    // we check again if edit btn is clicked we render edit component else create component  is rendered
     if (!isBtnActive) {
         if (editTrigger && editContact) {
             return (
