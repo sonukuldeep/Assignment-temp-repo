@@ -6,7 +6,7 @@ import store from '../redux/store';
 
 // Create tanstack query client
 const queryClient = new QueryClient()
-
+// exporting all the providers used in this project
 export default function RootProvider({ children }: { children: React.ReactNode }) {
     return (
         <BrowserRouter>

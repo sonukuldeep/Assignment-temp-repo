@@ -1,7 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+// initalial value of store
 const initialState: IContactState[] = []
 
+// create slice and reducers
 const contactSlice = createSlice({
     name: "contact",
     initialState,

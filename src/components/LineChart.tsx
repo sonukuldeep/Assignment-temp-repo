@@ -1,3 +1,4 @@
+// line chart are as per chartjs documentation with basic options and data passed to it
 import {
     Chart as ChartJS,
     CategoryScale,

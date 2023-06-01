@@ -3,6 +3,8 @@ import Button from './Button'
 import { updateContact } from '../redux/slice/contactSlice'
 import { useAppDispatch } from '../redux/hooks'
 import toast from 'react-hot-toast';
+
+// warning messages and notification messages
 const warn = () => toast.error('Enter all fields');
 const notifyEditSaved = () => toast.success('Edited contact saved');
 
@@ -17,7 +19,7 @@ const EditContact = ({ setBtnStatus, contact }: { setBtnStatus: React.Dispatch<R
     const [status, setStatus] = useState(contact.status)
     const dispatch = useAppDispatch()
 
-    // basic validation and calling dispatch function
+    // basic validation and calling dispatch function to update contact
     function handleSubmit() {
         if (!firstName || !lastName) {
             warn()

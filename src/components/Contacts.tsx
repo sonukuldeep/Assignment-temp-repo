@@ -48,7 +48,7 @@ const Contacts = () => {
                         <Button click={() => setIsBtnActive(pre => !pre)}>Create Contact</Button>
                         {/* display message if cards dont exist else display all cards if the */}
                         {contactDetails.length === 0 ? (
-                            <div className='flex gap-2 items-center border-2 p-2 rounded border-gray-500'>
+                            <div className='flex gap-2 items-center border-2 p-2 mx-2 rounded border-gray-500'>
                                 <MdCancel size='3em' />
                                 <p>No Contact Found <br />Please add contact from <br /> Create Contact Button</p>
                             </div>

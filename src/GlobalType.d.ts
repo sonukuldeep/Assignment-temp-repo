@@ -1,3 +1,4 @@
+// this file hold all type definations
 interface IContactState {
     id: string;
     firstName: string;

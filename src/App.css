@@ -7,7 +7,6 @@
 }
 
 body {
-    background-color: hsl(0, 0%, 75%);
     background: radial-gradient(circle, hsl(0, 100%, 30%), hsl(217, 91%, 60%));
     font-family: 'Lato', sans-serif;
 }
