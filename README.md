@@ -3,7 +3,7 @@
 
 Contact management app with Charts and Maps using ReactJS, TypeScript, TailwindCSS, React Router v6 and React Query aka TanstackQuery.
 
-Website link:-
+Website link:- https://assignment-taiyo-kuldeep-kumar.netlify.app
 
 Key features:-
 - Reactjs written fully using typescript 
@@ -29,7 +29,7 @@ The project requires node js and git.
 
 Clone the website using
 ```npm
-git clone 
+git clone git@github.com:sonukuldeep/Assignment-temp-repo.git
 ```
 
 Install this project with npm
